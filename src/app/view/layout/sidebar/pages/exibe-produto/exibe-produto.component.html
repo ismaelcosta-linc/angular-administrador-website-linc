@@ -1,0 +1,27 @@
+<div id="responsivo" style="width: auto;">
+	<h2 style="text-align: left; color: #fff; margin-bottom: 3rem; width: auto;">Produtos Cadastrados</h2>
+    <table class=" table-action" style="font-family: arial; max-width: 100%; background-color: transparent; font-size: small; ">
+            <thead>
+                <tr>
+                    <th class="t-small" style="color: #fff;">ID</th>
+                    <th class="t-small" style="color: #fff;">Nome</th>
+                    <th class="t-small" style="color: #fff;">Imagem</th>
+                    <th class="t-small" style="color: #fff;">Marca/Modelo</th>
+                    <th class="t-small" style="color: #fff;">Preço</th>
+                    <th class="t-small" style="color: #fff;">Descrição</th>
+                    <th class="t-small" ></th>
+                    <th class="t-small" ></th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,.1);">
+                <th scope="row" style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.idProduto}}</th>
+                <td style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.nomeProduto}}</td>
+                <td style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.pathImagemProduto}}<img alt="Image" height="100px" weidth="100px" src="" style="color: #a9a9a9;"></td>
+                <td style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.modeloMarcaProduto}}</td>
+                <td style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.precoRevendaUnidade}}</td>
+                <td style="padding:1.5rem 1rem 0rem 0; font-size: smaller; color: #fff">{{produto.descricaoProduto}}</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

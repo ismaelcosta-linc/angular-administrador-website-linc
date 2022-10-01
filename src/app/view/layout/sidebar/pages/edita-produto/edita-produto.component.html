@@ -1,0 +1,59 @@
+<h3 style="color: #fff;">Cadastro de Produto</h3>
+<div class="row">
+    <div class="" style="width: 100% !important;">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm" enctype="multipart/form-data">
+            <div class="row" style="margin: 0;">
+                <div class="form-group col-md-6">
+                    <label for="nome_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Nome Produto</label>
+                    <input type="text" class="form-control" value="{{produtoAlvo.nomeProduto}}" name="produtoAlvo.nomeProduto" [(ngModel)]="produtoAlvo.nomeProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="modelo_marca_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Modelo ou Marca</label>
+                    <input type="text" class="form-control" value="{{produtoAlvo.modeloMarcaProduto}}" name="produtoAlvo.modeloMarcaProduto" [(ngModel)]="produtoAlvo.modeloMarcaProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="preco_revenda_unidade" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Preço Revenda</label>
+                    <input type="text" class="form-control" value="{{produtoAlvo.precoRevendaUnidade}}" name="produtoAlvo.precoRevendaUnidade" [(ngModel)]="produtoAlvo.precoRevendaUnidade" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="descricao_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Descricao Produto</label>
+                    <input type="text" class="form-control" value="{{produtoAlvo.descricaoProduto}}" name="produtoAlvo.descricaoProduto" [(ngModel)]="produtoAlvo.descricaoProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="file_imagem_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Escolher Imagem</label>
+                    <input class="form-control" type="file" value="{{produtoAlvo.pathImagemProduto}}" name="produtoAlvo.pathImagemProduto" [(ngModel)]="produtoAlvo.pathImagemProduto" id="imagem" onchange="previewImagem()" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                    <br><br>
+                    <img style="width: 150px; height: 150px;">
+                    <br><br>
+                </div>
+            </div>   
+            <div class="second-half" style="margin: 1rem;">
+                <div class="callout-button">
+                    <div class="button-shortcode button-shortcode-626b85350b2d2" style="text-align: left;">
+                        <div style="display: block; text-align: left; width: 100%;">
+                            <button class="btn btn-primary" type="submit" style="font-size: 100%; background: rgba(0,0,0,0); color: #bfbfbf; border: 1px solid #fff; border-radius: 0; height: 2.8rem;" >Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script src="js/js-home-administrador/ajax-googleapi-imagem.js"></script>
+<!--                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script>
+            function previewImagem(){
+                var imagem = document.querySelector('input[name=file_imagem_produto]').files[0];
+                var preview = document.querySelector('img');
+                var reader = new FileReader();
+                reader.onloadend = function(){
+                    preview.src = reader.result;
+                }
+                
+                if(imagem){
+                    reader.readAsDataURL(imagem);
+                }else{
+                    preview.src = "";
+                }
+            }
+        </script>
+    </div>
+</div>

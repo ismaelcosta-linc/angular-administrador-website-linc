@@ -1,0 +1,63 @@
+<h3 style="color: #fff;">Cadastro de Produto</h3>
+<div class="row">
+    <div class="" style="width: 100% !important;">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm" enctype="multipart/form-data">
+            <div class="row" style="margin: 0;">
+                <div class="form-group col-md-6">
+                    <label for="nome_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Nome Produto</label>
+                    <input type="text" class="form-control" name="produto.nomeProduto" [(ngModel)]="produto.nomeProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="modelo_marca_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Modelo ou Marca</label>
+                    <input type="text" class="form-control" name="produto.modeloMarcaProduto" [(ngModel)]="produto.modeloMarcaProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="preco_revenda_unidade" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Preço Revenda</label>
+                    <input type="text" class="form-control" name="produto.precoRevendaUnidade" [(ngModel)]="produto.precoRevendaUnidade" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="descricao_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Descricao Produto</label>
+                    <input type="text" class="form-control" name="produto.descricaoProduto" [(ngModel)]="produto.descricaoProduto" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <!-- <div class="form-group col-md-6">
+                    <label for="file_imagem_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Escolher Imagem</label>
+                    <input class="form-control file-upload" formControlName="file" type="file" id="file" accept=".png, .jgp, .jpge" (change)="onFileSelected($event)" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="file_imagem_produto" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Escolher Imagem</label>
+                    <input class="form-control file-upload" formControlName="file" type="file" id="file" accept=".png, .jgp, .jpge" (change)="handleFileInput($event.target.files)" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div> -->
+                <div class="content" role="main">
+                    <div class="form-group">
+                        <label>Imagem:</label>
+                        <input type="file" (change)="onFileSelected($event)" class="form-control">
+                        <img [src]="localUrl" *ngIf="localUrl" class="imgPlaceholder">
+                        <input type="submit"  class="btn btn-success" value="Enviar">
+                    </div>
+                </div>
+                <p>{{localUrl1}}</p>
+            </div>   
+            <div class="second-half" style="margin: 1rem;">
+                <div class="callout-button">
+                    <div class="button-shortcode button-shortcode-626b85350b2d2" style="text-align: left;">
+                        <div style="display: block; text-align: left; width: 100%;">
+                            <button class="btn btn-primary"  type="submit" style="font-size: 100%; background: rgba(0,0,0,0); color: #bfbfbf; border: 1px solid #fff; border-radius: 0; height: 2.8rem;" >Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="content" role="main">
+
+                <div class="form-group">
+                    <label>Imagem:</label>
+                    <input type="file" (change)="selectFile($event)" class="form-control">
+                    <img [src]="localUrl" *ngIf="localUrl" class="imgPlaceholder">
+                    <input type="submit" (click)="uploadFile()" class="btn btn-success" value="Enviar">
+
+                </div>
+            </div> -->
+        </form>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<h3 style='color: #fff;'>Editar de Administrador </h3>
+<div class="row">
+    <div class="" style="width: 100% !important;">
+        <form (ngSubmit)="onSubmit()">
+            <div class="row" style="margin: 0;">
+                <div class="form-group col-md-6">
+                    <label for="username_administrador" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Username Admin -> {{administradorAlvo.usernameAdministrador}}</label>
+                    <input type="text" class="form-control" value="{{administradorAlvo.usernameAdministrador}}" name="administradorAlvo.usernameAdministrador" [(ngModel)]="administradorAlvo.usernameAdministrador" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password_administrador" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Password Admin -> {{administradorAlvo.passwordAdministrador}} </label>
+                    <input type="text" class="form-control" value="administradorAlvo.passwordAdministrador" name="administradorAlvo.passwordAdministrador" [(ngModel)]="administradorAlvo.passwordAdministrador" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nome_administrador" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Nome Admin -> {{administradorAlvo.nomeAdministrador}} </label>
+                    <input type="text" class="form-control" value="{{administradorAlvo.nomeAdministrador}}" name="administradorAlvo.nomeAdministrador" [(ngModel)]="administradorAlvo.nomeAdministrador" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="celular_administrador" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Celular -> {{administradorAlvo.celularAdministrador}} </label>
+                    <input type="text" class="form-control" value="{{administradorAlvo.celularAdministrador}}" name="administradorAlvo.celularAdministrador" [(ngModel)]="administradorAlvo.celularAdministrador" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>           
+                <div class="form-group col-md-6">
+                    <label for="endereco_administrador" class="col-form-label" style="color: #fff; font-size: small; font-weight: bolder;">Endereço Residencial -> {{administradorAlvo.enderecoAdministrador}} </label>
+                    <input type="text" class="form-control" value="{{administradorAlvo.enderecoAdministrador}}" name="administradorAlvo.enderecoAdministrador" [(ngModel)]="administradorAlvo.enderecoAdministrador" style="border-width: 1px; border-radius: 0; background: rgba(0,0,0,0); border-color: #bfbfbf; color: #bfbfbf; font-size: small;">
+                </div>
+            </div>   
+            <div class="second-half" style="margin: 1rem;">
+                <div class="callout-button">
+                    <div class="button-shortcode button-shortcode-626b85350b2d2" style="text-align: left;">
+                        <div style="display: block; text-align: left; width: 100%;">
+                            <button class="btn btn-primary" type="submit" style="font-size: 100%; background: rgba(0,0,0,0); color: #bfbfbf; border: 1px solid #fff; border-radius: 0; height: 2.8rem;" >Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </form>
+    </div>
+</div>
