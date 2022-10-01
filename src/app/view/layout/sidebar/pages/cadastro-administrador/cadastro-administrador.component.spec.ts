@@ -19,5 +19,6 @@ describe('CadastroAdministradorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    
   });
 });
